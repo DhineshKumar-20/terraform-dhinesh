@@ -1,7 +1,7 @@
 resource "aws_launch_template" "ec2_instance" {
   name_prefix   = "dhinesh-web-launch-template"
   image_id      = data.aws_ami.amazon_linux.id
-  instance_type = var.instance_type["test"]
+  instance_type = var.instance_type["dev"]
 
   key_name               = "dhinesh_key"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
