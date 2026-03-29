@@ -9,7 +9,7 @@ resource "aws_autoscaling_group" "web" {
   health_check_type   = "ELB" #this is the health check type for the autoscaling group
   launch_template {
     id      = aws_launch_template.ec2_instance.id
-    version = "$Latest"
+    version = "2"
   }
   tag {
     key                 = "Name"
